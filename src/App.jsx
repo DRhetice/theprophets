@@ -50,23 +50,6 @@ function App() {
     }
   
 
-  //  const formData = new FormData();
-  //   selectedFiles.forEach((file, index) => {
-  //     formData.append(`file${index}`, file);
-  //   });
-  //   alert(formData);
-  //   try {
-  //     response = await axios.post(
-  //       "https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat-hf",
-  //       {
-  //        headers
-  //       }
-  //     );
-  //     alert(response);
-  //     setUpload(false);
-  //   } catch (error) {
-  //     alert(error);
-  //   }
     
   };
 
@@ -81,7 +64,7 @@ function App() {
       </div>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
         <div className="absolute top-0 h-full w-full bg-[url('https://cdn.pixabay.com/photo/2016/11/23/15/23/cosmos-1853491_1280.jpg')] bg-cover bg-center" />
-        {/* <div className="absolute top-0 h-full w-full bg-white/75 bg-cover bg-center" /> */}
+
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
