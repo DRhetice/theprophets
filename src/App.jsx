@@ -125,7 +125,7 @@ function App() {
         <div className="items-center text-center m-10">
           <button
             onClick={handleUpload}
-            className="rounded-3xl bg-blue-800 p-4 shadow-lg shadow-slate-500"
+            className="rounded-3xl bg-blue-800 p-4 shadow-lg shadow-slate-500 text-white"
           >
             Launch verification
           </button>
