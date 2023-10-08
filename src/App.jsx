@@ -86,10 +86,10 @@ function App() {
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
               <h1 className="mb-6 text-white font-black text-6xl ">
-              Bienvenue dans l'univers de la prévention des catastrophes
+              Welcome to the world of disaster prevention
               </h1>
               <p className="text-white opacity-80 text-2xl">
-              Notre défi actuel est de développer des modèles d'IA hautement précis pour l'analyse géospatiale, en mettant particulièrement l'accent sur la détection de la déforestation. Nous nous efforçons de tirer parti des modèles existants tout en les affinant pour qu'ils puissent être utilisés dans des situations cruciales de préservation environnementale. Notre objectif ultime est de préserver nos précieuses forêts et de lutter contre la déforestation, une menace critique pour notre planète.
+              Our current challenge is to develop highly accurate AI models for geospatial analysis, with a particular focus on deforestation detection. We strive to leverage existing models while refining them for use in crucial environmental preservation situations. Our ultimate goal is to preserve our precious forests and combat deforestation, a critical threat to our planet.
               </p>
             </div>
           </div>
@@ -97,7 +97,7 @@ function App() {
       </div>
       <section className="relative px-4 pt-10 pb-5 m-5 ">
         <h1 className="text-3xl text-center p-2 items-center">
-          Upload d'images
+        Image upload
         </h1>
         <div class="border border-dashed border-gray-500 relative mx-20">
           <input
@@ -113,7 +113,7 @@ function App() {
             </button>
             {selectedFiles.map((file, index) => (
               <div key={index}>
-                <p>Nom du fichier : {file.name}</p>
+                <p>File name : {file.name}</p>
                 <p>Taille du fichier : {file.size} bytes</p>
               </div>
             ))}
@@ -127,7 +127,7 @@ function App() {
             onClick={handleUpload}
             className="rounded-3xl bg-blue-800 p-4 shadow-lg shadow-slate-500"
           >
-            Lancer la verification
+            Launch verification
           </button>
         </div>
 
@@ -222,7 +222,7 @@ function App() {
         <div className="mx-auto w-full px-4 text-center lg:w-6/12">
           <h2 className="mb-3 font-bold text-3xl text-white">About Us</h2>{" "}
           <p className="text-white">
-          La science et la technologie peuvent apporter des solutions tangibles aux problèmes environnementaux les plus pressants. Nous sommes déterminés à faire la différence en développant des modèles d'IA de pointe qui permettent une détection précoce et une intervention rapide pour protéger nos écosystèmes forestiers.
+          Science and technology can provide tangible solutions to the most pressing environmental problems. We are determined to make a difference by developing cutting-edge AI models that enable early detection and rapid intervention to protect our forest ecosystems.
           </p>
         </div>
         </footer>
