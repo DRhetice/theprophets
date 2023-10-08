@@ -20,7 +20,7 @@ function App() {
   };
   const headers = {
     Authorization: "Bearer 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",
-    'Content-Type': 'application/octet-stream', // Indiquez le type de contenu de la requête
+    "Content-Type": "application/octet-stream", // Indiquez le type de contenu de la requête
   };
 
   useEffect(() => {
@@ -37,20 +37,16 @@ function App() {
     }
     const file = selectedFiles[0];
     try {
-        const response = await axios.post(
-      "https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-large",
-      file,
-      { headers }
-    );
-    const generatedText = response.data[0].generated_text;
-    setResult(generatedText);
-
+      const response = await axios.post(
+        "https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-large",
+        file,
+        { headers }
+      );
+      const generatedText = response.data[0].generated_text;
+      setResult(generatedText);
     } catch (error) {
       console.error("Une erreur s'est produite : ", error);
     }
-  
-
-    
   };
 
   return (
@@ -69,19 +65,23 @@ function App() {
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
               <h1 className="mb-6 text-white font-black text-6xl ">
-              Welcome to the world of disaster prevention
+                Welcome to the world of disaster prevention
               </h1>
               <p className="text-white opacity-80 text-2xl">
-              Our current challenge is to develop highly accurate AI models for geospatial analysis, with a particular focus on deforestation detection. We strive to leverage existing models while refining them for use in crucial environmental preservation situations. Our ultimate goal is to preserve our precious forests and combat deforestation, a critical threat to our planet.
+                Our current challenge is to develop highly accurate AI models
+                for geospatial analysis, with a particular focus on
+                deforestation detection. We strive to leverage existing models
+                while refining them for use in crucial environmental
+                preservation situations. Our ultimate goal is to preserve our
+                precious forests and combat deforestation, a critical threat to
+                our planet.
               </p>
             </div>
           </div>
         </div>
       </div>
       <section className="relative px-4 pt-10 pb-5 m-5 ">
-        <h1 className="text-3xl text-center p-2 items-center">
-        Image upload
-        </h1>
+        <h1 className="text-3xl text-center p-2 items-center">Image upload</h1>
         <div class="border border-dashed border-gray-500 relative mx-20">
           <input
             type="file"
@@ -97,10 +97,9 @@ function App() {
             {selectedFiles.map((file, index) => (
               <div key={index}>
                 <p>File name : {file.name}</p>
-                <p>Taille du fichier : {file.size} bytes</p>
+                <p>File size : {file.size} bytes</p>
               </div>
             ))}
-           
           </div>
         </div>
 
@@ -115,12 +114,6 @@ function App() {
         </div>
 
         {/* Retour  */}
-        {result && (
-        <div>
-          <h2>Result:</h2>
-          <pre>{result}</pre>
-        </div>
-      )}
 
         <div className="border flex border-dashed border-gray-500 relative mt-20 mx-20 h-[500px] ">
           {upload ? (
@@ -131,32 +124,37 @@ function App() {
             <div className="flex flex-row h-full w-full">
               <div className="basis-1/2  border-r border-dashed border-gray-500">
                 <div className="items-center justify-center flex pt-2">
-                   <h1 className="text-3xl">Before</h1>
+                  <h1 className="text-3xl">Before</h1>
                 </div>
-               
-                  {previewImages.map((previewUrl, index) => (
-              <div
-                key={index}
-                className="items-center justify-center flex h-full w-full "
-              >
-                <img
-                  src={previewUrl}
-                  alt={`Prévisualisation ${index}`}
-                  className="h-full w-full object-cover pb-16 pt-6 px-9"
-                />
-              </div>
-            ))} 
+
+                {previewImages.map((previewUrl, index) => (
+                  <div
+                    key={index}
+                    className="items-center justify-center flex h-full w-full "
+                  >
+                    <img
+                      src={previewUrl}
+                      alt={`Prévisualisation ${index}`}
+                      className="h-full w-full object-cover pb-16 pt-6 px-9"
+                    />
+                  </div>
+                ))}
               </div>
               <div className="basis-1/2 ">
-              <div className="items-center justify-center flex pt-2">
-                   <h1 className="text-3xl">After</h1>
-                </div>
+                <div className="items-center justify-center flex pt-2">
+                  <h1 className="text-3xl">After</h1> </div>
+                  {result && (
+                    <div className="items-center justify-center flex h-full w-full ">
+                      <p>{result}</p>
+                    </div>
+                  )}
+                
               </div>
             </div>
           )}
         </div>
       </section>
-{/* 
+      {/* 
       <section className="px-4 pt-20 pb-48">
         <div className="mx-auto w-full px-4 text-center lg:w-6/12">
           <h2 className="mb-3 font-bold text-3xl">About Us</h2>{" "}
@@ -202,12 +200,15 @@ function App() {
       {/* Footer */}
       <div className="bg-blue-950 px-4 pt-20 ">
         <footer className="relative px-4 pt-2 py-12">
-        <div className="mx-auto w-full px-4 text-center lg:w-6/12">
-          <h2 className="mb-3 font-bold text-3xl text-white">About Us</h2>{" "}
-          <p className="text-white">
-          Science and technology can provide tangible solutions to the most pressing environmental problems. We are determined to make a difference by developing cutting-edge AI models that enable early detection and rapid intervention to protect our forest ecosystems.
-          </p>
-        </div>
+          <div className="mx-auto w-full px-4 text-center lg:w-6/12">
+            <h2 className="mb-3 font-bold text-3xl text-white">About Us</h2>{" "}
+            <p className="text-white">
+              Science and technology can provide tangible solutions to the most
+              pressing environmental problems. We are determined to make a
+              difference by developing cutting-edge AI models that enable early
+              detection and rapid intervention to protect our forest ecosystems.
+            </p>
+          </div>
         </footer>
       </div>
     </>
